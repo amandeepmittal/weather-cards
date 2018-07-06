@@ -11,7 +11,7 @@ export default class App extends React.Component {
 					<Text> Search</Text>
 				</View>
 				<View style={styles.cards}>
-					<CardsView />;
+					<CardsView backgroundColor="#ebebeb" />;
 				</View>
 			</View>
 		);
@@ -22,8 +22,6 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: '#fff'
-		// alignItems: 'center',
-		// justifyContent: 'center'
 	},
 	searchBar: {
 		flex: 1,

@@ -7,11 +7,26 @@ class CardsView extends Component {
 	render() {
 		return (
 			<View style={styles.cardContainer}>
-				<View style={styles.frontCardView}>
+				<View
+					style={[
+						styles.frontCardView,
+						{ backgroundColor: this.props.backgroundColor }
+					]}
+				>
 					<WeatherText />
 				</View>
-				<View style={styles.middleCardView} />
-				<View style={styles.backCardView} />
+				<View
+					style={[
+						styles.middleCardView,
+						{ backgroundColor: this.props.backgroundColor }
+					]}
+				/>
+				<View
+					style={[
+						styles.backCardView,
+						{ backgroundColor: this.props.backgroundColor }
+					]}
+				/>
 			</View>
 		);
 	}
@@ -29,7 +44,6 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		zIndex: 3,
 		top: 0,
-		backgroundColor: '#ebebeb',
 		opacity: 1,
 		transform: [{ scale: 1.0 }]
 	},
@@ -39,7 +53,6 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		zIndex: 2,
 		top: 25,
-		backgroundColor: '#ececec',
 		opacity: 0.7,
 		transform: [{ scale: 0.9 }]
 	},
@@ -49,7 +62,6 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		zIndex: 1,
 		top: 50,
-		backgroundColor: '#ededed',
 		opacity: 0.9,
 		transform: [{ scale: 0.8 }]
 	}
