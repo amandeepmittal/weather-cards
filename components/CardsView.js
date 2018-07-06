@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
+
+import WeatherText from './WeatherText';
 
 class CardsView extends Component {
 	render() {
 		return (
 			<View style={styles.cardContainer}>
-				<View style={styles.frontCardView} />
+				<View style={styles.frontCardView}>
+					<WeatherText />
+				</View>
 				<View style={styles.middleCardView} />
 				<View style={styles.backCardView} />
 			</View>
