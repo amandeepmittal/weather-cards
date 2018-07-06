@@ -10,7 +10,9 @@ class CardsView extends Component {
 				<View
 					style={[
 						styles.frontCardView,
-						{ backgroundColor: this.props.backgroundColor }
+						{
+							backgroundColor: this.props.backgroundColor
+						}
 					]}
 				>
 					<WeatherText />
