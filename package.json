@@ -16,7 +16,7 @@
 		"android": "react-native-scripts android",
 		"ios": "react-native-scripts ios",
 		"test": "jest",
-		"lint": "eslint . --ignore-path .gitignore --ext .js --ext .jsx"
+		"lint": "eslint . --ignore-path .gitignore --ext .js --ext .jsx --quiet"
 	},
 	"jest": {
 		"preset": "jest-expo"
