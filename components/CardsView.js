@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 		zIndex: 2,
 		top: 25,
 		backgroundColor: '#ececec',
-		opacity: 1,
+		opacity: 0.7,
 		transform: [{ scale: 0.9 }]
 	},
 	backCardView: {
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 		zIndex: 1,
 		top: 50,
 		backgroundColor: '#ededed',
-		opacity: 1,
+		opacity: 0.9,
 		transform: [{ scale: 0.8 }]
 	}
 });
