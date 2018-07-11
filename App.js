@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import CardStackView from 'react-native-cardstack-view';
 
-import CardsView from './components/CardsView';
+import WeatherText from './components/WeatherText';
 
 export default class App extends React.Component {
 	render() {
@@ -11,7 +12,9 @@ export default class App extends React.Component {
 					<Text> Search</Text>
 				</View>
 				<View style={styles.cards}>
-					<CardsView backgroundColor="#ebebeb" />;
+					<CardStackView backgroundColor="#ebebeb">
+						<WeatherText />
+					</CardStackView>
 				</View>
 			</View>
 		);
