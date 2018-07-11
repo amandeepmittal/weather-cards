@@ -1,5 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+	StyleSheet,
+	TextInput,
+	KeyboardAvoidingView,
+	View
+} from 'react-native';
 import CardStackView from 'react-native-cardstack-view';
 
 import WeatherText from './components/WeatherText';
@@ -7,16 +12,22 @@ import WeatherText from './components/WeatherText';
 export default class App extends React.Component {
 	render() {
 		return (
-			<View style={styles.container}>
+			<KeyboardAvoidingView style={styles.container} behavior="padding">
 				<View style={styles.searchBar}>
-					<Text> Search</Text>
+					<TextInput
+						autoCorrect={false}
+						placeholder="Search any City"
+						placeholderTextColor="#ffffff"
+						style={styles.textInput}
+						clearButtonMode="always"
+					/>
 				</View>
 				<View style={styles.cards}>
 					<CardStackView backgroundColor="#ebebeb">
 						<WeatherText />
 					</CardStackView>
 				</View>
-			</View>
+			</KeyboardAvoidingView>
 		);
 	}
 }
@@ -29,6 +40,16 @@ const styles = StyleSheet.create({
 	searchBar: {
 		flex: 1,
 		paddingTop: 50
+	},
+	textInput: {
+		width: 300,
+		height: 50,
+		marginTop: 40,
+		backgroundColor: '#666666',
+		marginHorizontal: 20,
+		paddingHorizontal: 10,
+		alignSelf: 'center',
+		color: '#ffffff'
 	},
 	cards: {
 		flex: 2
