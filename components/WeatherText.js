@@ -23,7 +23,10 @@ class WeatherText extends Component {
 
 		return (
 			<View>
-				<ActivityIndicator animating={loading} color="#000fff" size="large" />
+				<View style={styles.spinner}>
+					<ActivityIndicator animating={loading} color="#000fff" size="large" />
+				</View>
+
 				{!loading && (
 					<View>
 						{error && (
@@ -66,17 +69,23 @@ class WeatherText extends Component {
 }
 
 const styles = StyleSheet.create({
+	spinner: {
+		justifyContent: 'center',
+		alignItems: 'center',
+		flex: 1
+	},
 	textStyle: {
 		fontFamily: Platform.OS === 'ios' ? 'AvenirNext-Regular' : 'Roboto'
 	},
 	textErrorStyle: {
-		padding: 10,
+		padding: 80,
 		alignSelf: 'center',
 		fontSize: 32,
 		fontWeight: '200'
 	},
 
 	textTop: {
+		paddingTop: 10,
 		textAlign: 'left',
 		fontSize: 32
 	},

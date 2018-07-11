@@ -4,8 +4,7 @@ import {
 	KeyboardAvoidingView,
 	View,
 	ImageBackground,
-	StatusBar,
-	ActivityIndicator
+	StatusBar
 } from 'react-native';
 import CardStackView from 'react-native-cardstack-view';
 
@@ -84,7 +83,7 @@ export default class App extends React.Component {
 			<KeyboardAvoidingView style={styles.container} behavior="padding">
 				<StatusBar barStyle="light-content" />
 				<ImageBackground
-					source={getImageForWeather('Clear')}
+					source={getImageForWeather(weather)}
 					style={styles.imageContainer}
 					imageStyle={styles.image}
 				>
