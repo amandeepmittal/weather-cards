@@ -7,8 +7,9 @@ class SeachInput extends Component {
 			<View style={styles.searchBar}>
 				<TextInput
 					autoCorrect={false}
-					placeholder="Search any City"
+					placeholder={this.props.placeholder}
 					placeholderTextColor="#ffffff"
+					underlineColorAndroid="transparent"
 					style={styles.textInput}
 					clearButtonMode="always"
 				/>

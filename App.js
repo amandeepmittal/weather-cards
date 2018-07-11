@@ -9,7 +9,7 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<KeyboardAvoidingView style={styles.container} behavior="padding">
-				<SearchInput />
+				<SearchInput placeholder="Select a City" />
 				<View style={styles.cards}>
 					<CardStackView backgroundColor="#ebebeb">
 						<WeatherText />
