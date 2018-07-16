@@ -6,7 +6,7 @@ import {
 	ImageBackground,
 	StatusBar
 } from 'react-native';
-import CardStackView from 'react-native-cardstack-view';
+import SingleCardView from 'react-native-simple-card';
 
 import getImageForWeather from './utils/getImagesForWeather';
 import { fetchLocationId, fetchWeather } from './utils/api';
@@ -92,7 +92,7 @@ export default class App extends React.Component {
 						onSubmit={this.handleUpdateLocation}
 					/>
 					<View style={styles.cards}>
-						<CardStackView backgroundColor="#ffffff">
+						<SingleCardView backgroundColor="#ffffff">
 							<WeatherText
 								location={location}
 								loading={loading}
@@ -104,7 +104,7 @@ export default class App extends React.Component {
 								maxTemp={maxTemp}
 								windSpeed={windSpeed}
 							/>
-						</CardStackView>
+						</SingleCardView>
 					</View>
 				</ImageBackground>
 			</KeyboardAvoidingView>
